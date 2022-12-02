@@ -1,0 +1,6 @@
+.item-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 5rem;
+}
