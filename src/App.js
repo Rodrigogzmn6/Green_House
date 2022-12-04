@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <NavBar />
       <ItemListContainer greeting='HOLA CODERHOUSE'/>
       <ItemDetailContainer/>

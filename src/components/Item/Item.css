@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-.img-div {
+.item .img-div {
   display: flex;
   flex-direction: column;
   justify-content: center;

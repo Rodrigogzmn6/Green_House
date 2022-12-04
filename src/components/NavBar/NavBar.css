@@ -7,27 +7,27 @@
 .navbar header {
   align-items: center;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
-.navbar-logo h1 {
+.navbar .navbar-logo h1 {
   font-family: 'Dancing Script', cursive;
+  user-select: none;
 }
 
-.navbar-menu ul {
+.navbar .navbar-menu ul {
   display: flex;
   list-style: none;
 }
 
-.navbar-menu ul li {
+.navbar .navbar-menu ul li {
   border: solid 1px #4e6c50;
   font-weight: 700;
   margin: 0 1.5rem;
   padding: 0.75rem 0.5rem;
 }
 
-.navbar-menu ul li:hover {
+.navbar .navbar-menu ul li:hover {
   border-top: solid 1px;
   border-bottom: solid 1px;
   padding: 0.75rem 0.5rem;

@@ -7,16 +7,16 @@
   width: 70%;
 }
 
-.img-div {
+.item-detail .img-div {
   margin-right: 2rem;
 }
 
-.img-div img {
+.item-detail .img-div img {
   border-radius: 1rem;
   width: 100%;
 }
 
-.desc-div {
+.item-detail .desc-div {
   display: flex;
   flex-direction: column;
   flex-grow: 2;
@@ -24,16 +24,16 @@
   text-align: left;
 }
 
-.desc-div *:not(:last-child) {
+.item-detail .desc-div *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.add-button {
+.item-detail .add-button {
   text-align: center;
   width: 100%;
 }
 
-.desc-div button {
+.item-detail .desc-div button {
   background-color: #4e6c50;
   border-radius: .5rem;
   padding: 1rem 2rem;

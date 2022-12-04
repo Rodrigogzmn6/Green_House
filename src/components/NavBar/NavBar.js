@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <div className="navbar">
       <header>
-        <div className="navbar-logo logo">
+        <div className="navbar-logo">
           <h1>GREEN HOUSE</h1>
         </div>
         <div className="navbar-menu">
@@ -19,15 +19,6 @@ function NavBar() {
                 rel="noreferrer"
               >
                 Inicio
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Productos
               </a>
             </li>
             <li>
