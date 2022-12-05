@@ -7,6 +7,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$50',
     stock: 5,
+    category: ['flor']
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$60',
     stock: 10,
+    category: ['flor']
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$70',
     stock: 15,
+    category: ['flor']
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$80',
     stock: 20,
+    category: ['planta']
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$90',
     stock: 25,
+    category: ['planta']
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$100',
     stock: 30,
+    category: ['planta']
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$110',
     stock: 35,
+    category: ['maceta']
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$120',
     stock: 40,
+    category: ['maceta']
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$130',
     stock: 45,
+    category: ['maceta']
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const items = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     price: '$140',
     stock: 50,
+    category: ['maceta']
   },
 ]
 

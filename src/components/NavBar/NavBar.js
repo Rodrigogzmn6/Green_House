@@ -2,60 +2,39 @@ import React from 'react'
 import './NavBar.css'
 import '../CartWidget/CartWidget'
 import CartWidget from '../CartWidget/CartWidget'
+import {Link} from 'react-router-dom';
 
 function NavBar() {
   return (
     <div className="navbar">
       <header>
         <div className="navbar-logo">
-          <h1>GREEN HOUSE</h1>
+          <Link to={'/'}>
+            <h1>GREEN HOUSE</h1>
+          </Link>
+          
         </div>
         <div className="navbar-menu">
           <ul>
             <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Inicio
-              </a>
+              <Link to={'/'}>
+                Tienda
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tips y Cuidados
-              </a>
+              <Link to={`/category/${'flor'}`}>
+                Flores
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Envíos
-              </a>
+              <Link to={`/category/${'planta'}`}>
+                Plantas
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Quiénes Somos
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.coderhouse.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Contactanos
-              </a>
+              <Link to={`/category/${'maceta'}`}>
+                Macetas
+              </Link>
             </li>
           </ul>
         </div>

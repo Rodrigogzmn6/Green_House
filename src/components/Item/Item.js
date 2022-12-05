@@ -1,13 +1,14 @@
 import React from 'react'
 import './Item.css'
+import {NavLink} from 'react-router-dom';
 
 function Item({ item }) {
   return (
-    <div className="item" onClick={() => console.log(`${item.name} clicked`)}>
+    <NavLink to={`/item/${item.id}`} className='item'>
       <div className="img-div">
         <img src={item.picture} alt={`${item.name}`} />
       </div>
-      <div>
+      <div className="prod-info-div">
         <h2>{item.name}</h2>
         {item.stock > 0 ? (
           <h3 className="stock-price">{item.price}</h3>
@@ -15,7 +16,7 @@ function Item({ item }) {
           <h3 className="no-stock">Sin Stock</h3>
         )}
       </div>
-    </div>
+    </NavLink>
   )
 }
 

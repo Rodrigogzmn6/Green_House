@@ -11,6 +11,7 @@
 
 .item img {
   border-radius: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -19,4 +20,8 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: 2;
+}
+
+.prod-info-div {
+  color: #222831;
 }

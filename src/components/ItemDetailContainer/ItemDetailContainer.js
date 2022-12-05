@@ -2,20 +2,21 @@ import React, { useEffect, useState } from 'react'
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import items from '../../data';
-
-const selectedItem = items[3];
+import { useParams } from 'react-router-dom';
 
 function ItemDetailContainer() {
+  const { id } = useParams();
   const [item, setItem] = useState({});
 
   const itemPromise = new Promise((resolve) => {
     setTimeout(() => {
-      resolve(selectedItem);
+      resolve(items.filter(item => item.id === parseInt(id)));
     }, 2000);
   });
 
   useEffect(() => {
-    itemPromise.then(res => setItem(res))
+    itemPromise.then(res => setItem(res[0]))
+    // 
   });
 
   return (
