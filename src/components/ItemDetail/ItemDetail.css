@@ -46,5 +46,6 @@
   background-color: #4e6c50;
   border-radius: .5rem;
   color: #F0EBCE !important;
+  cursor: pointer;
   padding: 1rem 2rem;
 }

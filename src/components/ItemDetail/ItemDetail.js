@@ -1,7 +1,19 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 function ItemDetail({ item }) {
+  const [itemCount, setItemCount] = useState(0);
+
+  function handleRemoveButton() {
+    itemCount > 0 ? setItemCount(itemCount-1) : setItemCount(itemCount);
+  }
+
+  function handleAddButton() {
+    itemCount < item.stock ? setItemCount(itemCount+1) : setItemCount(itemCount);
+  }
+
   return (
     <div className="item-detail">
       <div className="img-div">
@@ -15,10 +27,12 @@ function ItemDetail({ item }) {
         </div>
         <div className='add-cart-div'>
           <div className='item-count-div'>
-            <ItemCount stock={item.stock}/>
+            <ItemCount itemCount={itemCount} onRemove={handleRemoveButton} onAdd={handleAddButton}/>
           </div>
           <div className='add-button'>
-            <button>Agregar al carrito</button>
+            <Link to='/cart'>
+              <button>Agregar al carrito</button>
+            </Link>
           </div>
         </div>
       </div>

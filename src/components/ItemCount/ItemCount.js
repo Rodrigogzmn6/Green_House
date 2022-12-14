@@ -3,22 +3,13 @@ import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded';
 import './ItemCount.css'
 
-function ItemCount({ stock }) {
-  const [itemCount, setItemCount] = useState(0);
-
-  function handleRemoveButton() {
-    itemCount > 0 ? setItemCount(itemCount-1) : setItemCount(itemCount);
-  }
-
-  function handleAddButton() {
-    itemCount < stock ? setItemCount(itemCount+1) : setItemCount(itemCount);
-  }
+function ItemCount({ itemCount, onRemove, onAdd }) {
 
   return(
     <div className='item-count'>
-      <RemoveRoundedIcon className='item-count-button' onClick={() => handleRemoveButton()}/>
+      <RemoveRoundedIcon className='item-count-button' onClick={onRemove}/>
       <p>{itemCount}</p>
-      <AddRoundedIcon className='item-count-button' onClick={() => handleAddButton()}/>
+      <AddRoundedIcon className='item-count-button' onClick={onAdd}/>
     </div>
   );
 }
