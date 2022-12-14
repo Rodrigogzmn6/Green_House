@@ -3,6 +3,7 @@ import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import items from '../../data';
 import { useParams } from 'react-router-dom';
+import ItemLoading from '../ItemLoading/ItemLoading';
 
 function ItemDetailContainer() {
   const { id } = useParams();
@@ -20,6 +21,10 @@ function ItemDetailContainer() {
   });
 
   return (
+    Object.keys(item).length === 0 ?
+    <div className='item-list-loading'>
+      <ItemLoading /> 
+    </div> :
     <div className="item-detail-container">
       <h1>Aquí tenés toda la info que necesitas</h1>
       <ItemDetail item={item}/>

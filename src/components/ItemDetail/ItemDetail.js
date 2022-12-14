@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './ItemDetail.css'
+import './ItemDetail.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail({ item }) {
   return (
@@ -13,8 +13,13 @@ function ItemDetail({ item }) {
           <p>{item.description}</p>
           <h3 className="price">{item.price}</h3>
         </div>
-        <div className='add-button'>
-          <button>Agregar al carrito</button>
+        <div className='add-cart-div'>
+          <div className='item-count-div'>
+            <ItemCount stock={item.stock}/>
+          </div>
+          <div className='add-button'>
+            <button>Agregar al carrito</button>
+          </div>
         </div>
       </div>
     </div>

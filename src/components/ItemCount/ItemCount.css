@@ -1,0 +1,13 @@
+.item-count {
+  align-items: center;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 10px 2px #aa8b56;
+  color: #222831;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-count .item-count-button {
+  cursor: pointer;
+}

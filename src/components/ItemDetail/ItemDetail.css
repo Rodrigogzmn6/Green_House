@@ -24,17 +24,27 @@
   text-align: left;
 }
 
-.item-detail .desc-div *:not(:last-child) {
+.item-detail .desc-div .item-info * {
   margin-bottom: 1rem;
+}
+
+.item-detail .add-cart-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-detail .item-count-div p {
+  margin: 0 2rem;
 }
 
 .item-detail .add-button {
   text-align: center;
-  width: 100%;
 }
 
-.item-detail .desc-div button {
+.item-detail .add-button button {
   background-color: #4e6c50;
   border-radius: .5rem;
+  color: #F0EBCE !important;
   padding: 1rem 2rem;
 }

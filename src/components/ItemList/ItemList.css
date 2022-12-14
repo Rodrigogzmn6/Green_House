@@ -4,3 +4,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 0 5rem;
 }
+
+.item-list-loading {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  width: 100%;
+}
