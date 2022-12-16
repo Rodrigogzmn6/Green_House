@@ -18,10 +18,12 @@ function CartContextProvider({ children }) {
         ...cartItems,
         { id: item.id, name: item.name, price: item.price, quantity: quantity },
       ])
-    console.log(cartItems)
   }
 
-  function removeItem(itemId) {}
+  function removeItem(itemId) {
+    isInCart(itemId) &&
+      setCartItems(cartItems.filter((element) => element.id !== itemId))
+  }
 
   function clear() {
     setCartItems([])

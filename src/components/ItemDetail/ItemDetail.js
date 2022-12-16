@@ -6,7 +6,7 @@ import { CartContext } from '../../contexts/CartContext'
 
 function ItemDetail({ item }) {
   const [itemCount, setItemCount] = useState(0)
-  const { addItem } = useContext(CartContext)
+  const { addItem, removeItem } = useContext(CartContext)
 
   function handleRemoveButton() {
     itemCount > 0 ? setItemCount(itemCount - 1) : setItemCount(itemCount)
@@ -20,6 +20,10 @@ function ItemDetail({ item }) {
 
   function handleAddToCart() {
     addItem(item, itemCount)
+  }
+
+  function handleClearCart() {
+    removeItem(item.id)
   }
 
   return (
@@ -47,6 +51,7 @@ function ItemDetail({ item }) {
                 Agregar al carrito
               </button>
             </Link>
+            <button onClick={() => handleClearCart()}>Limpiar item</button>
           </div>
         </div>
       </div>
