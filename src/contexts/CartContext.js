@@ -11,24 +11,31 @@ function CartContextProvider({ children }) {
     if (quantity <= 0) {
       shouldAdd = false
     } else {
-      cartItems.forEach((element) => {
-        if (element.id === item.id) {
-          shouldAdd = false
-        }
-      })
+      shouldAdd = !isInCart(item.id)
     }
     shouldAdd &&
       setCartItems([
         ...cartItems,
         { id: item.id, name: item.name, price: item.price, quantity: quantity },
       ])
+    console.log(cartItems)
   }
 
   function removeItem(itemId) {}
 
-  function clear() {}
+  function clear() {
+    setCartItems([])
+  }
 
-  function isInCart(id) {}
+  function isInCart(id) {
+    let inCart = false
+    cartItems.forEach((element) => {
+      if (element.id === id) {
+        inCart = true
+      }
+    })
+    return inCart
+  }
 
   return (
     <CartContext.Provider
