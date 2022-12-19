@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './NavBar.css'
 import '../CartWidget/CartWidget'
 import CartWidget from '../CartWidget/CartWidget'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../contexts/CartContext'
 
 function NavBar() {
+  const { cartItems } = useContext(CartContext)
   return (
     <div className="navbar">
       <header>
@@ -12,34 +14,25 @@ function NavBar() {
           <Link to={'/'}>
             <h1>GREEN HOUSE</h1>
           </Link>
-          
         </div>
         <div className="navbar-menu">
           <ul>
             <li>
-              <Link to={'/'}>
-                Tienda
-              </Link>
+              <Link to={'/'}>Tienda</Link>
             </li>
             <li>
-              <Link to={`/category/${'flor'}`}>
-                Flores
-              </Link>
+              <Link to={`/category/${'flor'}`}>Flores</Link>
             </li>
             <li>
-              <Link to={`/category/${'planta'}`}>
-                Plantas
-              </Link>
+              <Link to={`/category/${'planta'}`}>Plantas</Link>
             </li>
             <li>
-              <Link to={`/category/${'maceta'}`}>
-                Macetas
-              </Link>
+              <Link to={`/category/${'maceta'}`}>Macetas</Link>
             </li>
           </ul>
         </div>
         <div className="cart-icon">
-          <CartWidget />
+          {cartItems.length > 0 ? <CartWidget /> : <div></div>}
         </div>
       </header>
     </div>

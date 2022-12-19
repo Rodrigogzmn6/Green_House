@@ -10,19 +10,18 @@ function CartContextProvider({ children }) {
     let shouldAdd = true
     if (quantity <= 0) {
       shouldAdd = false
+      alert('Debes agregar uno o más ítems')
     } else {
+      isInCart(item.id) && alert('El elemento ya se encuentra en tu carrito')
       shouldAdd = !isInCart(item.id)
     }
     shouldAdd &&
-      setCartItems([
-        ...cartItems,
-        { id: item.id, name: item.name, price: item.price, quantity: quantity },
-      ])
+      setCartItems([...cartItems, { item: item, quantity: quantity }])
   }
 
   function removeItem(itemId) {
     isInCart(itemId) &&
-      setCartItems(cartItems.filter((element) => element.id !== itemId))
+      setCartItems(cartItems.filter((element) => element.item['id'] !== itemId))
   }
 
   function clear() {
@@ -32,7 +31,7 @@ function CartContextProvider({ children }) {
   function isInCart(id) {
     let inCart = false
     cartItems.forEach((element) => {
-      if (element.id === id) {
+      if (element.item['id'] === id) {
         inCart = true
       }
     })
