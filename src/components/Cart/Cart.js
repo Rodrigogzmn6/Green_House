@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import CartItem from '../CartItem/CartItem'
 import './Cart.css'
+import BuyerForm from '../BuyerForm/BuyerForm'
 
 function Cart() {
   const { cartItems, removeItem } = useContext(CartContext)
@@ -35,20 +36,18 @@ function Cart() {
           ))}
       </div>
       <div className="total-div">
-        <div>
+        <div className="total-amount">
           <h2 className="total">TOTAL</h2>
           <h2>$ {total}</h2>
         </div>
-        <Link to="/" className="boton-finalizar-compra">
-          <button>Finalizar Compra</button>
-        </Link>
+        <BuyerForm />
       </div>
     </div>
   ) : (
     <div className="empty-cart">
       <h2>Tu carrito está vacío</h2>
       <Link to="/">
-        <button onClick={() => console.log('clic')}>Volver a la tienda</button>
+        <button>Volver a la tienda</button>
       </Link>
     </div>
   )

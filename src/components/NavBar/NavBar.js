@@ -21,13 +21,13 @@ function NavBar() {
               <Link to={'/'}>Tienda</Link>
             </li>
             <li>
-              <Link to={`/category/${'flor'}`}>Flores</Link>
-            </li>
-            <li>
               <Link to={`/category/${'planta'}`}>Plantas</Link>
             </li>
             <li>
               <Link to={`/category/${'maceta'}`}>Macetas</Link>
+            </li>
+            <li>
+              <Link to={`/category/${'herramienta'}`}>Herramientas</Link>
             </li>
           </ul>
         </div>

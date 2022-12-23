@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import items from '../../data';
-import { useParams } from 'react-router-dom';
-import ItemLoading from '../ItemLoading/ItemLoading';
+import { useParams } from 'react-router-dom'
+import ItemLoading from '../ItemLoading/ItemLoading'
+import { getFirestore, doc, getDoc } from 'firebase/firestore'
 
 function ItemDetailContainer() {
-  const { id } = useParams();
-  const [item, setItem] = useState({});
-
-  const itemPromise = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(items.filter(item => item.id === parseInt(id)));
-    }, 2000);
-  });
+  const { id } = useParams()
+  const [item, setItem] = useState({})
 
   useEffect(() => {
-    itemPromise.then(res => setItem(res[0]))
-    // 
-  });
+    const db = getFirestore()
+    const itemRef = doc(db, 'Items', id)
+    getDoc(itemRef).then((snapshot) => {
+      setItem({ id: snapshot.id, ...snapshot.data() })
+    })
+  }, [id])
 
-  return (
-    Object.keys(item).length === 0 ?
-    <div className='item-list-loading'>
-      <ItemLoading /> 
-    </div> :
+  return Object.keys(item).length === 0 ? (
+    <div className="item-list-loading">
+      <ItemLoading />
+    </div>
+  ) : (
     <div className="item-detail-container">
       <h1>Aquí tenés toda la info que necesitas</h1>
-      <ItemDetail item={item}/>
+      <ItemDetail item={item} />
     </div>
   )
 }

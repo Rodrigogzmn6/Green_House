@@ -25,3 +25,16 @@
 .prod-info-div {
   color: #222831;
 }
+
+.prod-info-div h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prod-info-div h3.stock-price {
+  color: #4e6c50;
+}
+
+.prod-info-div h3.no-stock {
+  color: red;
+}
