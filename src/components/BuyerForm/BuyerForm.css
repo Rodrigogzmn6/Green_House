@@ -24,17 +24,28 @@
   padding: 0.75rem;
 }
 
-.buyer-form .form-submit {
+/* .buyer-form .form-submit {
   background-color: #4e6c50;
   border-radius: 0.5rem;
   cursor: pointer;
   margin: 1.5rem 6rem;
   padding: 1rem 2rem;
-}
+} */
 
-.buyer-form .form-submit input {
+.buyer-form .form-submit button {
   background-color: #4e6c50;
+  border-radius: 0.5rem;
   color: #faeab1;
   cursor: pointer;
+  font-size: 1.25rem;
+  margin: 1.5rem 6rem;
+  padding: 1rem 2rem;
+}
+
+.buyer-form .form-submit button:disabled,
+.buyer-form .form-submit button[disabled] {
+  background-color: gray;
+  color: darkgray;
+  cursor: default;
   font-size: 1.25rem;
 }

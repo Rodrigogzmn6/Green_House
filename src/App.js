@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartContextProvider } from './contexts/CartContext'
 import Cart from './components/Cart/Cart'
+import BuyConfirmation from './components/BuyConfirmation/BuyConfirmation'
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
             />
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route
+              exact
+              path="/confirmation/:id"
+              element={<BuyConfirmation />}
+            />
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

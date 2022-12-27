@@ -40,7 +40,7 @@ function Cart() {
           <h2 className="total">TOTAL</h2>
           <h2>$ {total}</h2>
         </div>
-        <BuyerForm />
+        <BuyerForm total={total} />
       </div>
     </div>
   ) : (
