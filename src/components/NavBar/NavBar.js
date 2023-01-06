@@ -32,7 +32,7 @@ function NavBar() {
           </ul>
         </div>
         <div className="cart-icon">
-          {cartItems.length > 0 ? <CartWidget /> : <div></div>}
+          {cartItems.length > 0 && <CartWidget />}
         </div>
       </header>
     </div>

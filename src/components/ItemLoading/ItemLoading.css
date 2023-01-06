@@ -1,6 +1,6 @@
 .item-loading {
-  border: 5px solid #F0EBCE; /* Light grey */
-  border-top: 5px solid #4E6C50; /* Blue */
+  border: 5px solid #f0ebce;
+  border-top: 5px solid #4e6c50;
   border-radius: 50%;
   width: 5vw;
   height: 5vw;
@@ -8,6 +8,10 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

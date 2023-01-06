@@ -1,25 +1,17 @@
 import React, { useContext } from 'react'
-import './CartWidget.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import Badge from '@mui/material/Badge'
 import { CartContext } from '../../contexts/CartContext'
 import { Link } from 'react-router-dom'
 
 function CartWidget() {
-  const { cartItems } = useContext(CartContext)
+  const { getTotalQuantity } = useContext(CartContext)
 
-  function cartQuantity() {
-    let quantity = 0
-    cartItems.forEach((element) => {
-      quantity += element.quantity
-    })
-    return quantity
-  }
   return (
     <div className="cart-widget">
       <Link to="/cart">
         <Badge
-          badgeContent={cartQuantity()}
+          badgeContent={getTotalQuantity()}
           sx={{
             '& .MuiBadge-badge': {
               color: '#4E6C50',

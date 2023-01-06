@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# E-commerce para un vivero
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue creado con [React](https://es.reactjs.org/).
 
-## Available Scripts
+## Cómo utilizar esta página
 
-In the project directory, you can run:
+### **Barra de navegación**
+![Barra de navegación](./nav_bar.jpg)
+La barra superior sirve para navegar a través de la página, permite mostrar todos los productos de la tienda, o filtrarlos por categorias (plantas, macetas y herramientas). Además, en caso de que haya elementos en el carrito, se incorporará al final de la barra un ícono que muestra la cantidad de elementos agregados al mismo y al hacer click, nos envía a la página de checkout.
 
+### **Lista de productos**
+![Lista de productos](./items_list.jpg)
+Ya sea que estén filtrados o no, se muestran todos los productos correspondientes, cada uno con su imagen, su título y su precio, y en cada elemento se puede hacer click para agregarlo al carrito.
+La lista de productos se obtiene desde una base de datos en Firebase.
+
+### **Detalles de un producto**
+![Detalles del producto](./item_detail.jpg)
+Una vez que se hace click en un elemento, se abre una página con los detalles del mismo, aparte de los datos en la lista de productos, se agrega una descripción y controladores para decidir cuántas unidades agregar al carrito y el botón para hacerlo.
+También se controla que el ítem no esté ya agregado al carrito y que la cantidad sea mayor a 0 unidades.
+### **Carrito**
+![Carrito](./checkout.jpg)
+Aquí se muestra el resumen de compra, las cantidades de cada ítem, su precio y el importe total.
+También hay un formulario para rellenar los datos personales y finalizar la compra de todos los productos. Una vez confirmado, se le devolverá al cliente un ID de su pedido para poder realizar consultas sobre el mismo.
+![Confirmación](./confirmation.jpg)
+___
+
+## Cómo está armada esta página
+Al ser codificada utilizando React, para poder armar esta página se hizo uso de componentes.
+
+![Estructura del proyecto](./project.jpg)
+
+Cada componente está en una carpeta, donde están el archivo .js y el .css correspondiente para mantener el proyecto más ordenado. Y en cada componente está explicado su funcionamiento en el código. Y para una mejor organización, cada componente tiene como clase al propio nombre del componente. Por ejemplo:
+
+![Componente](./component.jpg)
+
+![CSS de un componente](./component_css.jpg)
+
+Todos los productos de la tienda son recuperados desde una base de datos creada en firebase, donde también se guardan todas las órdenes de compra una vez que el usuario las confirma.
+
+Además, para la utilización del carrito, se usó el concepto de 'Contexto', codificado en la carpeta 'contexts'. En este contexto se maneja todo lo relacionado al carrito, por ejemplo, ver todos los items agregados, eliminarlos, calcular el total de la compra, etc.
+___
+
+## Correr la aplicación
+
+Una vez en el directorio del proyecto, puedes correr:
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para correr la aplicación en modo desarrollo.\
+Abre [http://localhost:3000](http://localhost:3000) para verla en el navegador.
+Cada vez que se guarde algún cambio en el código, la página se recarga.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lanza las pruebas del sitio.\
+Ver la sección [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para más información.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Buildea la aplicación a para producción a la carpeta `build`.\
+Optimiza el build para el mejor rendimiento.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ver la sección [deployment](https://facebook.github.io/create-react-app/docs/deployment) para más información.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Nota: Esta operación no se puede deshacer.**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este comando copia todos los archivos de configuración del build al proyecto para que puedas tener completo control sobre ellos. Todos los comandos menos `eject` seguirán funcionando, pero apuntarán a los archivos copiados para que puedas modificarlos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Links útiles
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ver más sobre cómo utilizar el comando [Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aprender más sobre [React](https://reactjs.org/).

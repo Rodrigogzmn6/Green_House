@@ -16,6 +16,7 @@ function ItemList({ filter }) {
   useEffect(() => {
     const db = getFirestore()
     const itemsCollection = collection(db, 'Items')
+    //Si se aplica un filtro, muestro solo los elementos filtrados
     if (filter !== undefined) {
       const q = query(itemsCollection, where('category', '==', filter))
       getDocs(q).then((snapshot) => {
@@ -25,6 +26,7 @@ function ItemList({ filter }) {
         }))
         setItemsList(items)
       })
+      //No hay filtro, entonces se muestran todos los elementos
     } else {
       getDocs(itemsCollection).then((snapshot) => {
         const items = snapshot.docs.map((doc) => ({

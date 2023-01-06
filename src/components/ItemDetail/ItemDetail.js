@@ -43,9 +43,7 @@ function ItemDetail({ item }) {
           </div>
           <div className="add-button">
             <Link to={itemCount > 0 && !isInCart(item.id) ? '/cart' : ''}>
-              <button onClick={() => handleAddToCart()}>
-                Agregar al carrito
-              </button>
+              <button onClick={handleAddToCart}>Agregar al carrito</button>
             </Link>
           </div>
         </div>

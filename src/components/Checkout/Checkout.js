@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 import React, { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import CartItem from '../CartItem/CartItem'
-import './Cart.css'
+import './Checkout.css'
 import BuyerForm from '../BuyerForm/BuyerForm'
 
-function Cart() {
-  const { cartItems, removeItem } = useContext(CartContext)
+function Checkout() {
+  const { cartItems, removeItem, getTotalAmount } = useContext(CartContext)
 
   let total = 0
   cartItems.forEach((element) => {
@@ -38,9 +38,9 @@ function Cart() {
       <div className="total-div">
         <div className="total-amount">
           <h2 className="total">TOTAL</h2>
-          <h2>$ {total}</h2>
+          <h2>$ {getTotalAmount()}</h2>
         </div>
-        <BuyerForm total={total} />
+        <BuyerForm total={getTotalAmount()} />
       </div>
     </div>
   ) : (
@@ -53,4 +53,4 @@ function Cart() {
   )
 }
 
-export default Cart
+export default Checkout
