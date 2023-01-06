@@ -8,11 +8,6 @@ import BuyerForm from '../BuyerForm/BuyerForm'
 function Checkout() {
   const { cartItems, removeItem, getTotalAmount } = useContext(CartContext)
 
-  let total = 0
-  cartItems.forEach((element) => {
-    total += element.item['price'] * element.quantity
-  })
-
   function handleRemoveItem(itemId) {
     removeItem(itemId)
   }
